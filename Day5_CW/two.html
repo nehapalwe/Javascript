@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Object Empty</title>
+    <script>
+        function isEmpty(obj) { 
+            return Object.keys(obj).length === 0;
+        }
+
+        window.onload = function() {
+            let schedule = {};
+            alert(isEmpty(schedule)); 
+            schedule["8:30"] = "get up";
+            alert(isEmpty(schedule)); 
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
+

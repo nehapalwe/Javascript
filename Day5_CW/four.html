@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        let calculator = (function() {
+            let a = 0; 
+            let b = 0; 
+            
+            return {
+                read: function() { 
+                    a = +prompt("Enter the first value (a):"); 
+                    b = +prompt("Enter the second value (b):"); 
+                },
+                
+                sum: function() { 
+                    return a + b; 
+                },
+                
+                mul: function() { 
+                    return a * b;
+                }
+            };
+        })();
+
+        function runCalculator() {
+            calculator.read(); 
+            alert(calculator.sum()); 
+            alert(calculator.mul()); 
+        }
+    </script>
+</head>
+<body>
+    <button onclick="runCalculator()">Start Calculator</button>
+</body>
+</html>
